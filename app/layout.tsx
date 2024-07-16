@@ -1,16 +1,23 @@
-import type { Metadata } from 'next';
-import { Inter as FontSans } from 'next/font/google';
-import './globals.css';
-import { cn } from '@/lib/utils';
-import { ThemeProvider } from '@/components/theme-provider';
+import type { Metadata } from "next";
+import { Inter as FontSans } from "next/font/google";
+
+import "./globals.css";
+
+import { cn } from "@/lib/utils";
+
+import { Providers } from "@/providers/providers";
 
 const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans',
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
 export const metadata: Metadata = {
-  title: 'Nextjs Starter Kit',
-  description: 'Nextjs Starter Kit with shadcn/ui',
+  title: "ADM Open AI POC",
+  description: "Nextjs  Open AI POC",
+  authors: {
+    name: "Nishanth Murugan (687027)",
+  },
+  keywords: ["nextjs", "openai"],
 };
 
 export default function RootLayout({
@@ -20,20 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          'min-h-screen bg-background font-sans antialiased',
-          fontSans.variable
-        )}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+      <body className={cn("flex flex-col bg-background font-sans antialiased", fontSans.variable)}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
