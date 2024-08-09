@@ -12,12 +12,12 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 export const metadata: Metadata = {
-  title: "ADM Open AI POC",
-  description: "Nextjs  Open AI POC",
+  title: "Nextjs Starter Kit",
+  description: "Nextjs Starter Kit By Nishanth Murugan",
   authors: {
-    name: "Nishanth Murugan (687027)",
+    name: "Nishanth Murugan",
   },
-  keywords: ["nextjs", "openai"],
+  keywords: ["nextjs", "shadcnui", "starterKit", "nishanth"],
 };
 
 export default function RootLayout({

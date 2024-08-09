@@ -81,7 +81,7 @@ body {
     text-wrap: balance;
   }
   .h-cover {
-    @apply min-h-[calc(88vh)];
+    @apply min-h-[calc(86vh)];
   }
   .wrapper {
     @apply w-full max-w-7xl p-5 md:px-10 lg:mx-auto xl:px-0;
@@ -90,9 +90,9 @@ body {
 
 /* browser scrollbar */
 ::-webkit-scrollbar {
-  @apply bg-primary/20 h-1 w-[6px];
+  @apply h-1 w-[6px] bg-primary/20;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary/70 rounded-full;
+  @apply rounded-full bg-primary/70;
 }
